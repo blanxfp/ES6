@@ -40,3 +40,18 @@ const power = (base, exponent) => {
 } 
 
 const greet = who => console.log("Hello " + who);
+
+
+// Exercici 3
+// Arregla l'error del següent bloc de codi:
+
+var users = 
+[{ firstName: 'Homer', lastName: 'Simpson' },
+{ firstName: 'Marge', lastName: 'Simpson' },
+{ firstName: 'Bart', lastName: 'Simpson' },
+{ firstName: 'Lisa', lastName: 'Simpson' },
+{ firstName: 'Maggie', lastName: 'Simpson' }];
+
+var firstNames = users.map(function (user) {
+   return user.firstName;
+});
