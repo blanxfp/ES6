@@ -73,11 +73,30 @@
 // Exercici 5
 // Crear una funció que accepti un string i retornada aquest string revertit. Nota: Usar funció fletxa (arrow functions), l'operador de prograpación (spread operator) y el mètode .reverse()
 
-var string = "podries tornar aquest string invertit?";
-string = [...string];
+// var string = "podries tornar aquest string invertit?";
+// string = [...string];
 
-const reversedString = string => {
-   return this.string.reverse();
+// const reversedString = string => {
+//    return this.string.reverse();
+// }
+
+// console.log(reversedString());
+
+// Exercici 6
+// Reemplaça en el següent bloc de codi la promesa per aync/await:
+
+
+function b() {
+   return new Promise(resolve => {
+      setTimeout(() => {
+        resolve( doMoreWork());
+      }, 2000);
+    });
 }
 
-console.log(reversedString());
+async function a() {
+   const result = await b();
+   console.log(result);
+}
+
+a();
