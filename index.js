@@ -86,17 +86,56 @@
 // Reemplaça en el següent bloc de codi la promesa per aync/await:
 
 
-function b() {
-   return new Promise(resolve => {
-      setTimeout(() => {
-        resolve( doMoreWork());
-      }, 2000);
-    });
-}
+// function b() {
+//    return new Promise(resolve => {
+//       setTimeout(() => {
+//         resolve( doMoreWork());
+//       }, 2000);
+//     });
+// }
 
-async function a() {
-   const result = await b();
-   console.log(result);
-}
+// async function a() {
+//    const result = await b();
+//    console.log(result);
+// }
 
-a();
+// a();
+
+// Exercici 7
+// Tenim un array de tasques i volem aconseguir un array que contingui únicament els noms de les tasques. 
+
+
+// - Usar .forEach() per obtenir aquest array.
+
+// - Usar .map() per obtenir aquest array.
+
+var tasks = [
+{
+   'name' : 'Start React web',
+   'duration' : 120
+},
+{
+   'name' : 'Work out',
+   'duration' : 60
+},
+{
+   'name' : 'Procrastinate on facebook',
+   'duration' : 240
+}
+];
+
+let newArray = [];
+
+//forEach
+tasks.forEach(task => {
+   newArray.push(task.name);
+});
+
+console.log(newArray);
+
+//map
+const newArrayMap = tasks.map(function (task) {
+   return task.name;
+});
+
+console.log(newArrayMap);
